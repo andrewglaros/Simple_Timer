@@ -1,0 +1,155 @@
+body {
+	font-family: 'helvetica', 'arial', sans-serif;
+	position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+header, .time-button {
+    height: 20%;
+    width: 100%;
+    display: table;
+}
+h1, .time-label, .push-label{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*=== LABELS ===*/
+h1, .time-label {
+    font-size: 3em;
+    font-weight: 600;
+    padding-left: 5%;
+}
+h1 { 
+    color: #FFF;
+}
+.time-label {
+    color: #222;
+    z-index: 1000;
+    position: relative;
+}
+.push-label {
+    font-size: 1.5em;
+    font-weight: normal;
+    text-align: right;
+    padding-right: 5%;
+    color: #999;
+}
+
+/*=== CONTAINERS ===*/
+
+header {
+    background-color: #222;
+}
+    h1 {
+        margin: 0;
+    }
+.time-button {
+    cursor: pointer;
+}
+#button-1{
+    background-color: #FFF;
+}
+#button-2{
+    background-color: #EEE;
+}
+#button-3{
+    background-color: #DDD;
+}
+#button-4{
+    background-color: #CCC;
+}
+#button-5{
+    background-color: #BBB;
+}
+
+
+/*=== TIMER ===*/
+
+.progress-bar {
+    color: lightgreen;
+    position: absolute;
+    background-color: lightgreen;
+    width: 100%;
+    height: inherit;
+    z-index: 1;
+    right: 0%;
+    opacity: 0;
+}
+.time-button:active .progress-bar{
+    right: 100%;
+    opacity: 1;
+}
+.time-button:active .push-label{
+    opacity: 0;
+}
+#button-1:active .progress-bar,
+#button-2:active .progress-bar,
+#button-3:active .progress-bar,
+#button-4:active .progress-bar,
+#button-5:active .progress-bar{
+    -webkit-transition: right 0s linear;
+        transition: right 0s linear;
+}
+#button-1 .progress-bar{
+    -webkit-transition: right 30s linear, opacity 0.3s linear 30s;
+        transition: right 30s linear, opacity 0.3s linear 30s;
+}
+#button-2 .progress-bar{
+    -webkit-transition: right 60s linear, opacity 0.3s linear 60s;
+        transition: right 60s linear, opacity 0.3s linear 60s;
+}
+#button-3 .progress-bar{
+    -webkit-transition: right 90s linear, opacity 0.3s linear 90s;
+        transition: right 90s linear, opacity 0.3s linear 90s;
+}
+#button-4 .progress-bar{
+    -webkit-transition: right 120s linear, opacity 0.3s linear 120s;
+        transition: right 120s linear, opacity 0.3s linear 120s;
+}
+#button-5 .progress-bar{
+    -webkit-transition: right 180s linear, opacity 0.3s linear 180s;
+        transition: right 180s linear, opacity 0.3s linear 180s;
+}
+#button-1:active .push-label,
+#button-2:active .push-label,
+#button-3:active .push-label,
+#button-4:active .push-label,
+#button-5:active .push-label{
+    -webkit-transition: opacity 0s linear;
+        transition: opacity 0s linear;
+}
+#button-1 .push-label{
+    -webkit-transition: opacity 0s linear 30s;
+        transition: opacity 0s linear 30s;
+}
+#button-2 .push-label{
+    -webkit-transition: opacity 0s linear 60;
+        transition: opacity 0s linear 60s;
+}
+#button-3 .push-label{
+    -webkit-transition: opacity 0s linear 90s;
+        transition: opacity 0s linear 90s;
+}
+#button-4 .push-label{
+    -webkit-transition: opacity 0s linear 120s;
+        transition: opacity 0s linear 120s;
+}
+#button-5 .push-label{
+    -webkit-transition: opacity 0s linear 180s;
+        transition: opacity 0s linear 180s;
+}
+
+/*=== MOBILE ===*/
+
+@media screen and (max-device-width: 452px), screen and (max-width: 452px) {
+
+    .time-label{
+        font-size: 1.75em;
+    }
+    .push-label{
+        font-size: 1.25em;
+    }
